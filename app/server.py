@@ -5,13 +5,13 @@ from starlette.middleware.cors import CORSMiddleware
 import uvicorn, aiohttp, asyncio
 from io import BytesIO
 
-from fastai import *
-from fastai.vision import *
+from fastai.vision.all import *
+from fastai.vision.widgets import *
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1x0ZBAZhk6hYM7CdVeEDalt0dIspNz3-V'
-export_file_name = 'cuisine.pkl'
+export_file_url = 'https://drive.google.com/u/0/uc?export=download&confirm=3mhE&id=1H_llTv5rSU7YqQ-jdpF_NhOCm00Oso21'
+export_file_name = 'mask.pkl'
 
-classes = ['middel eastren food' , 'italian food' , 'asian food', 'french food']
+classes = ['with mask' , 'no mask' ]
 path = Path(__file__).parent
 
 app = Starlette()
